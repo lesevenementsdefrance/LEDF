@@ -13,22 +13,16 @@ que pointer vers eux.
 
 ## Développement local
 
-```bash
-docker compose up --build
-```
-
-Le site est alors servi sur http://localhost:8090.
-
-Sans Docker, il suffit d'ouvrir `index.html` dans un navigateur.
+Aucune dépendance : ouvrir `index.html` dans un navigateur suffit.
 
 ## Déploiement
 
-Le déploiement est automatisé via GitHub Actions (`.github/workflows/deploy.yml`) :
-à chaque push sur `main`, le site est synchronisé sur le serveur puis reconstruit
-avec `docker compose up -d --build`.
+Le serveur sert `lesevenementsdefrance.fr` avec un nginx natif (+ Certbot pour le
+SSL), en statique, directement depuis `/var/www/lesevenementsdefrance.fr`.
 
-Le serveur écoute en local sur `127.0.0.1:8090` ; c'est à Nginx Proxy Manager
-de faire pointer `lesevenementsdefrance.fr` vers cette adresse (avec certificat SSL).
+Le déploiement est automatisé via GitHub Actions (`.github/workflows/deploy.yml`) :
+à chaque push sur `main`, les fichiers statiques sont synchronisés par `rsync`
+dans ce dossier — pas de build, pas de conteneur.
 
 ### Secrets GitHub requis
 
@@ -39,7 +33,7 @@ de faire pointer `lesevenementsdefrance.fr` vers cette adresse (avec certificat 
 | `DEPLOY_HOST`     | IP ou nom d'hôte du serveur                            |
 | `DEPLOY_USER`     | Utilisateur SSH de déploiement                         |
 | `DEPLOY_SSH_KEY`  | Clé privée SSH (correspondant à une clé autorisée sur le serveur) |
-| `DEPLOY_PATH`     | Chemin absolu du repo sur le serveur                   |
+| `DEPLOY_PATH`     | `/var/www/lesevenementsdefrance.fr`                    |
 
 ## Licence
 
