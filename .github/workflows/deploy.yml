@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Validate HTML
-        run: npx --yes html-validate index.html
+        run: npx --yes html-validate index.html mentions-legales.html
 
   deploy:
     needs: lint
@@ -32,5 +32,5 @@ jobs:
       - name: Sync static files to server
         run: |
           rsync -avz --delete \
-            index.html styles.css app.js logo.png favicon.png apple-touch-icon.png robots.txt \
+            index.html mentions-legales.html styles.css app.js logo.png favicon.png apple-touch-icon.png robots.txt \
             "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/"
