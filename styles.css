@@ -104,7 +104,8 @@ main {
 }
 
 .about p {
-  color: var(--muted);
+  color: #333;
+  max-width: 38em;
 }
 
 .site-footer {
