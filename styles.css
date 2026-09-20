@@ -36,10 +36,6 @@ body {
   font-size: 1.05rem;
 }
 
-.login {
-  position: relative;
-}
-
 .login-btn {
   font: inherit;
   font-size: 0.9rem;
@@ -49,35 +45,12 @@ body {
   background: transparent;
   color: var(--ink);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .login-btn:hover {
   background: var(--ink);
   color: var(--paper);
-}
-
-.login-menu {
-  position: absolute;
-  right: 0;
-  top: calc(100% + 0.5rem);
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  min-width: 10rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-.login-menu a {
-  display: block;
-  padding: 0.65rem 1rem;
-  color: var(--ink);
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.login-menu a:hover {
-  background: #f5f5f5;
 }
 
 main {
