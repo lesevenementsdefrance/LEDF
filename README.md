@@ -3,13 +3,8 @@
 Landing page de l'association **Les Événements de France**.
 
 Site statique minimaliste (HTML/CSS/JS vanilla, aucune dépendance) avec un bouton
-*Login* qui ouvre un menu vers les services internes de l'association :
-
-- [n8n](https://n8n.lesevenementsdefrance.fr)
-- [Supabase](https://supabase.lesevenementsdefrance.fr)
-
-L'authentification a lieu sur ces services eux-mêmes ; la landing page ne fait
-que pointer vers eux.
+*Login* qui mène au dashboard privé de l'association. L'accès est protégé par une
+authentification (SSO) côté serveur ; ce dépôt ne contient que la page publique.
 
 ## Développement local
 
