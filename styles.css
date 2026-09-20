@@ -3,7 +3,10 @@
   --paper: #ffffff;
   --muted: #6b6b6b;
   --line: #e6e6e6;
-  --max-width: 720px;
+  --max-width: 960px;
+  --accent: #b3125b;
+  --accent-2: #ff7a1a;
+  --card: #faf7f5;
 }
 
 * {
@@ -79,8 +82,10 @@ main {
 }
 
 .hero h1 {
-  font-size: 2rem;
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  line-height: 1.15;
   margin: 0 0 1rem;
+  max-width: 18em;
 }
 
 .hero p {
@@ -115,6 +120,10 @@ main {
   color: inherit;
 }
 
+.legal {
+  max-width: 720px;
+}
+
 .legal h1 {
   font-size: 2rem;
   margin: 0 0 1.5rem;
@@ -132,4 +141,132 @@ main {
 
 .legal ul {
   padding-left: 1.25rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: #333;
+  max-width: 36em;
+  margin: 0 0 1.75rem;
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn-primary {
+  border-color: transparent;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  color: #fff;
+  filter: brightness(0.92);
+}
+
+.block {
+  margin-top: 4rem;
+}
+
+.block h2 {
+  font-size: 1.6rem;
+  margin: 0 0 0.75rem;
+}
+
+.block p {
+  max-width: 40em;
+}
+
+.intro {
+  color: #333;
+  margin: 0 0 1.5rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  border-top: 3px solid var(--accent);
+}
+
+.card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.checks {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 44em;
+}
+
+.checks li {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.checks li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+}
+
+.join {
+  padding: 2rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+.join p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 520px) {
+  .block { margin-top: 3rem; }
+  .brand .wordmark { font-size: 0.95rem; }
 }
