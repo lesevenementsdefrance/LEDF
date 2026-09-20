@@ -31,6 +31,25 @@ body {
   padding: 1.5rem 1.25rem;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand img {
+  display: block;
+}
+
+.hero-logo {
+  display: block;
+  width: 160px;
+  height: auto;
+  margin: 0 0 1.5rem;
+}
+
 .wordmark {
   font-weight: 600;
   font-size: 1.05rem;
