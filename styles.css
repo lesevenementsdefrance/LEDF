@@ -153,6 +153,12 @@ html {
   margin: 0 0 1.75rem;
 }
 
+.note {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .cta {
   display: flex;
   flex-wrap: wrap;
