@@ -142,109 +142,18 @@ main {
   padding-left: 1.25rem;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .lead {
   font-size: 1.15rem;
   color: #333;
   max-width: 34em;
-  margin: 0 0 1.75rem;
-}
-
-.note {
-  margin: 1rem 0 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.7rem 1.3rem;
-  border: 1px solid var(--ink);
-  border-radius: 999px;
-  color: var(--ink);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.btn:hover {
-  background: var(--ink);
-  color: var(--paper);
-}
-
-.btn-primary {
-  border-color: transparent;
-  background: linear-gradient(90deg, var(--accent-2), var(--accent));
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background: linear-gradient(90deg, var(--accent-2), var(--accent));
-  color: #fff;
-  filter: brightness(0.92);
-}
-
-.block {
-  margin-top: 4.5rem;
-}
-
-.block h2 {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 0.5rem;
-}
-
-.rows {
-  border-top: 1px solid var(--ink);
-}
-
-.row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
-  gap: 0.5rem 2rem;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.row h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.row p {
-  margin: 0;
-  color: #333;
-}
-
-.join h2 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: normal;
-  text-transform: none;
-  color: var(--ink);
-  max-width: 20em;
-  margin-bottom: 0.75rem;
+  margin: 0 0 1.25rem;
 }
 
 .mail {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: var(--accent);
 }
 
 @media (max-width: 640px) {
-  .block { margin-top: 3.25rem; }
-  .row { grid-template-columns: 1fr; }
   .brand .wordmark { font-size: 0.95rem; }
 }
