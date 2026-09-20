@@ -120,8 +120,8 @@ main {
   color: inherit;
 }
 
-.legal {
-  max-width: 720px;
+.legal > * {
+  max-width: 42em;
 }
 
 .legal h1 {
